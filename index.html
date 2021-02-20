@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Онлайн галерея с вашими любимыми питомцами!">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <div class="container">
+        <div class="theme-wrapper">
+            <div class="theme-icon-wrapper">
+                <img src="/img/icons/moon.svg" alt="dark theme" class="theme-icon">
+            </div>
+        </div>
+        <h1 class="title">Gallery</h1>
+        <p class="description-text">
+            Culpa aute do in do ex Lorem nulla culpa non. Id culpa dolor culpa commodo. 
+            Nisi velit labore do ipsum qui ut enim elit. Non exercitation labore deserunt 
+            Lorem velit laboris commodo nostrud duis. In laboris adipisicing aliqua laboris 
+            eiusmod magna est consequat id labore excepteur.
+        </p>
+
+        <div class="menu">
+            <div class="menu__sorts">
+                <h3 class="menu__sorts-title">Сортировка</h3>
+                <select name="sort" id="" class="sort-categories">
+                    <option value="1">По дате добавления (возрастание)</option>
+                    <option value="2">По дате добавления (убывание)</option>
+                    <option value="3">По лайкам (возрастание)</option>
+                    <option value="4">По лайкам (убывание)</option>
+                </select>
+            </div>
+            <div class="menu__filters">
+                <h3 class="menu__filters-title">Фильтры</h3>
+                <form class="checkboxes">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" class="custom-checkbox" id="cats" name="cats" value="yes" checked>
+                        <label for="cats">Котики</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" class="custom-checkbox" id="dogs" name="dogs" value="yes" checked>
+                        <label for="dogs">Собачки</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" class="custom-checkbox" id="parrots" name="parrots" value="yes" checked>
+                        <label for="parrots">Попугаи</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" class="custom-checkbox" id="others" name="others" value="yes" checked>
+                        <label for="others">Остальные</label>
+                    </div>                   
+                </form>
+            </div>
+        </div>
+
+
+        <div class="gallery">
+            <div class="gallery-items">
+                <div class="gallery-item active">
+                    <div class="gallery-item__data">
+                        <span id="photo_1-data">23-12-2018</span>
+                    </div>
+                    <div class="gallery-item__likes likes">
+                        <span class="likes-amount" id="photo_1-likes">53</span>
+                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__data">
+                        <span id="photo_2-data">25-12-2018</span>
+                    </div>
+                    <div class="gallery-item__likes likes">
+                        <span class="likes-amount" id="photo_2-likes">13</span>
+                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__data">
+                        <span id="photo_3-data">29-12-2018</span>
+                    </div>
+                    <div class="gallery-item__likes likes">
+                        <span class="likes-amount" id="photo_3-likes">35</span>
+                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__data">
+                        <span id="photo_4-data">31-12-2018</span>
+                    </div>
+                    <div class="gallery-item__likes likes">
+                        <span class="likes-amount" id="photo_4-likes">44</span>
+                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__data">
+                        <span id="photo_5-data">01-01-2019</span>
+                    </div>
+                    <div class="gallery-item__likes likes">
+                        <span class="likes-amount" id="photo_5-likes">12</span>
+                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__data">
+                        <span id="photo_6-data">13-01-2019</span>
+                    </div>
+                    <div class="gallery-item__likes likes">
+                        <span class="likes-amount" id="photo_6-likes">54</span>
+                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__data">
+                        <span id="photo_6-data">13-01-2019</span>
+                    </div>
+                    <div class="gallery-item__likes likes">
+                        <span class="likes-amount" id="photo_6-likes">5</span>
+                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__data">
+                        <span id="photo_8-data">15-01-2019</span>
+                    </div>
+                    <div class="gallery-item__likes likes">
+                        <span class="likes-amount" id="photo_8-likes">33</span>
+                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item__data">
+                        <span id="photo_9-data">19-01-2019</span>
+                    </div>
+                    <div class="gallery-item__likes likes">
+                        <span class="likes-amount" id="photo_9-likes">43</span>
+                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h3 class="copyright">&#169;, 2021</h3>
+    </footer>
+</body>
+</html>
