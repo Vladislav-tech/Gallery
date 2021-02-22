@@ -10,7 +10,8 @@
 
 body {
     font-family: $mainFont;
-    background-color: $backgroundLight;
+    background-color: $backgroundDark;
+    color: #fff;
 }
 
 .container {
@@ -21,7 +22,7 @@ body {
 
 .title {
     font-family: $mainFont;
-    color: $titleColor;
+    color: $primary;
     margin-top: 128px;
     text-align: center;
     font-weight: 900;
@@ -42,6 +43,7 @@ body {
 
 .theme-icon-wrapper {
     border: 1px solid $backgroundDark;
+    background-color: $primary;
     display: flex;
     justify-content: center;
 }
