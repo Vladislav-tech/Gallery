@@ -138,15 +138,7 @@ body {
   background-color: #006DD1;
   color: #fff;
   margin-top: 50px;
-  /* для элемента input c type="checkbox" */
-  /* для элемента label, связанного с .custom-checkbox */
-  /* создание в label псевдоэлемента before со следующими стилями */
-  /* стили при наведении курсора на checkbox */
-  /* стили для активного чекбокса (при нажатии на него) */
-  /* стили для чекбокса, находящегося в фокусе */
-  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-  /* стили для чекбокса, находящегося в состоянии checked */
-  /* стили для чекбокса, находящегося в состоянии disabled */
+
 }
 .menu__filters {
   margin-top: 11px;
@@ -258,23 +250,23 @@ body {
 }
 
 .gallery-item_1 {
-  background: url("../img/animals/cat-1.jpg");
+  background: url("../img/animals/cats/1.jpg");
 }
 
 .gallery-item_3 {
-  background: url("../img/animals/guinea-pig-1.jpg");
+  background: url("../img/animals/guinea-pigs/1.jpg");
 }
 
 .gallery-item_4 {
-  background: url("../img/animals/guinea-pig-2.jpg");
+  background: url("../img/animals/guinea-pigs/2.jpg");
 }
 
 .gallery-item_5 {
-  background: url("../img/animals/dog-1.webp");
+  background: url("../img/animals/dogs/1.webp");
 }
 
 .gallery-item_6 {
-  background: url("../img/animals/dog-2.jpg");
+  background: url("../img/animals/dogs/2.jpg");
 }
 
 .gallery-item {
