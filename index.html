@@ -5,22 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Онлайн галерея с вашими любимыми питомцами!">
+    <meta name="keywords" content="галерея, онлайн, питомцы">
     <link rel="stylesheet" href="css/light.css" id="theme">
+    <link rel="shortcut icon" href="img/icons/favicon.svg">
     <title>Gallery</title>
 </head>
 <body>
     <div class="container">
         <div class="theme-wrapper">
             <div class="theme-icon-wrapper">
-                <img src="/img/icons/moon.svg" alt="dark theme" class="theme-icon">
             </div>
         </div>
         <h1 class="title">Gallery</h1>
-        <p class="description-text">
-            Culpa aute do in do ex Lorem nulla culpa non. Id culpa dolor culpa commodo. 
-            Nisi velit labore do ipsum qui ut enim elit. Non exercitation labore deserunt 
-            Lorem velit laboris commodo nostrud duis. In laboris adipisicing aliqua laboris 
-            eiusmod magna est consequat id labore excepteur.
+        <p class="description-text description-text_1">
+            Простая галерея с возможностью сортировки и фильтрацией. В ассортименте галереи представлены милые домашние животные,
+            способные понравиться <b>каждому!</b>
+        </p>
+        <p class="description-text description-text_2">
+            Выберите желаемые фильтры, метод сортировки и вы фотографии будут упорядочены
         </p>
 
         <div class="menu">
@@ -60,6 +62,7 @@
         <div class="gallery">
             <div class="gallery-items">
                 <div class="gallery-item active gallery-item_1">
+                    <div class="gallery-item__share-image"></div>
                     <div class="gallery-item__data">
                         <span id="photo_1-data" class="photo-data">23-12-2018</span>
                     </div>
@@ -67,10 +70,19 @@
                         <span class="likes-amount" id="photo_1-likes">53</span>
                         <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
                     </div>
+
+                    <div class="gallery-item__short-description">
+                        <h5 class="gallery-item__title">У Сёмочки День Рождения!</h5>
+                        <p class="gallery-item__text">Вы только посмотрите на этого прекрасного малыша! Он такой хорошенький, красивый и прелестный! <br>
+                           Я очень люблю своего Сёму.&#128151;&#128151;&#128151; Мы сделали эту фотографию на его день рождение (5 годиков)! 	
+                           &#127881;...
+                        </p>
+                    </div>
                 </div>
 
-                <div class="gallery-item">
-                    <div class="gallery-item__data gallery-item_2">
+                <div class="gallery-item gallery-item_2">
+                    <div class="gallery-item__share-image"></div>
+                    <div class="gallery-item__data">
                         <span id="photo_2-data" class="photo-data">25-12-2018</span>
                     </div>
                     <div class="gallery-item__likes likes">
@@ -80,6 +92,7 @@
                 </div>
 
                 <div class="gallery-item gallery-item_3">
+                    <div class="gallery-item__share-image"></div>
                     <div class="gallery-item__data">
                         <span id="photo_3-data" class="photo-data">29-12-2018</span>
                     </div>
@@ -90,6 +103,7 @@
                 </div>
 
                 <div class="gallery-item gallery-item_4">
+                    <div class="gallery-item__share-image"></div>
                     <div class="gallery-item__data">
                         <span id="photo_4-data" class="photo-data">31-12-2018</span>
                     </div>
@@ -100,6 +114,7 @@
                 </div>
 
                 <div class="gallery-item gallery-item_5">
+                    <div class="gallery-item__share-image"></div>
                     <div class="gallery-item__data">
                         <span id="photo_5-data" class="photo-data">01-01-2019</span>
                     </div>
@@ -110,6 +125,7 @@
                 </div>
 
                 <div class="gallery-item gallery-item_6">
+                    <div class="gallery-item__share-image"></div>
                     <div class="gallery-item__data">
                         <span id="photo_6-data" class="photo-data">13-01-2019</span>
                     </div>
@@ -120,6 +136,7 @@
                 </div>
 
                 <div class="gallery-item gallery-item_7">
+                    <div class="gallery-item__share-image"></div>
                     <div class="gallery-item__data">
                         <span id="photo_6-data" class="photo-data">13-01-2019</span>
                     </div>
@@ -130,6 +147,7 @@
                 </div>
 
                 <div class="gallery-item gallery-item_8">
+                    <div class="gallery-item__share-image"></div>
                     <div class="gallery-item__data">
                         <span id="photo_8-data" class="photo-data">15-01-2019</span>
                     </div>
@@ -140,6 +158,7 @@
                 </div>
 
                 <div class="gallery-item gallery-item_9">
+                    <div class="gallery-item__share-image"></div>
                     <div class="gallery-item__data">
                         <span id="photo_9-data" class="photo-data">19-01-2019</span>
                     </div>
@@ -153,9 +172,18 @@
     </div>
 
     <footer class="footer">
-        <h3 class="copyright">&#169;, 2021</h3>
+        <h3 class="copyright">&#169;Copyright, 2021</h3>
+        <div class="developers">
+            <h3 class="developers__title">Разработчики</h3>
+            <p>
+                <a href="https://github.com/vladislav-tech" target="_blank">Vladislav-tech</a>
+            </p>
+            <p>
+                <a href="https://github.com/3BePbZZZ" target="_blank">3BePbZZZ</a>
+            </p>
+        </div>
     </footer>
 
-    <script src="js/themes.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

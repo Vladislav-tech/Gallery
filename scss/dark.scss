@@ -32,9 +32,15 @@ body {
 }
 
 .description-text {
-    margin: 119px 0 0 36px;
+    margin: 119px 0 0 0;
+    text-indent: 36px;
     font-size: 18px;
 }
+
+.description-text_2 {
+    margin: 25px 0;
+}
+
 
 .theme-wrapper {
     width: 222px;
@@ -42,15 +48,19 @@ body {
 }
 
 .theme-icon-wrapper {
+    background: url("../img/icons/sun.svg") center no-repeat;
+    cursor: pointer;
+    width: 222px;
+    height: 64px;
     border: 1px solid $backgroundDark;
     background-color: $primary;
-    display: flex;
-    justify-content: center;
+    transition: .7s;
 }
 
-.theme-icon {
-    margin: 8px 0;
+.theme-icon-wrapper:hover {
+    box-shadow: 0px 0px 4px 5px white;
 }
+
 
 // menu start
 
@@ -191,23 +201,39 @@ body {
 }
 
 .gallery-item_1 {
-    background: url("../img/animals/cat-1.jpg");
+    background: url("../img/animals/cats/1.jpg");
+}
+
+.gallery-item_2 {
+    background: url("../img/animals/parrots/1.webp");
 }
 
 .gallery-item_3 {
-    background: url("../img/animals/guinea-pig-1.jpg");
+    background: url("../img/animals/guinea-pigs/1.jpg");
 }
 
 .gallery-item_4 {
-    background: url("../img/animals/guinea-pig-2.jpg");
+    background: url("../img/animals/guinea-pigs/2.jpg");
 }
 
 .gallery-item_5 {
-    background: url("../img/animals/dog-1.webp");
+    background: url("../img/animals/dogs/1.webp");
 }
 
 .gallery-item_6 {
-    background: url("../img/animals/dog-2.jpg");
+    background: url("../img/animals/dogs/2.jpg");
+}
+
+.gallery-item_7 {
+    background: url("../img/animals/parrots/2.jpg");
+}
+
+.gallery-item_8 {
+    background: url("../img/animals/parrots/3.jpg");
+}
+
+.gallery-item_9 {
+    background: url("../img/animals/snakes/1.jpg");
 }
 
 
@@ -236,11 +262,37 @@ body {
 	    left: 208px;
         font-size: 30px;
         line-height: 35px;
-        color: $titleColor;
+        color: #fff;
+        text-shadow: 1px 1px black;
 
         .likes-amount {
             margin-right: 9px;
         }
+    }
+
+    
+    &__short-description {
+        position: absolute;
+        top: 100%;
+        padding: 2%;
+        background-color: #fff;
+        color: $titleColor
+
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        margin: 20px 0 0 0;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 15px;
+        text-indent: 20px;
+        margin: 10px 0 0 0;
     }
 }
 
@@ -250,10 +302,40 @@ body {
 // footer start
 
 .footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
     background-color: $primary;
     color: #fff;
-    margin-top: 382px;
+    padding: 30px;
     min-height: 132px;
+}
+
+.copyright {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.developers {
+    margin-top: 30px;
+    text-align: right;
+
+    &__title {
+        @extend %h3;
+    }
+
+    & p {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    
+    & a {
+        color: rgb(255, 255, 255);
+        transition: .4s;
+    }
+
+    & a:hover {
+        color: rgb(37, 202, 51)
+    }
 }
 
 // footer end
