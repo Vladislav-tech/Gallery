@@ -2,21 +2,7 @@
   import PhotoStorage from './modules/PhotoStorage.js';
   'use strict';
 
-  // TESTING Functionality
-
-   /*const photo = new Photo({
-   	imgUrl: 'img/animals/cats/1.jpg', 
-   	title: 'My title', 
-    text: 'text text text...', 
-    likes: 20, 
-    date: '2019-05-23', 
-    group: 'bears'
-   });
-   photo.render(document.querySelector('.gallery-items'));
-
-   console.log(photo); */
-
-    const photoStorage = new PhotoStorage({container: '.gallery-items'});
+  const photoStorage = new PhotoStorage({container: '.gallery-items'});
   photoStorage.addPhoto({
     imgUrl: 'img/animals/cats/1.jpg', 
     title: 'У Сёмочки День Рождения!', 
@@ -65,30 +51,12 @@
   });
 
   photoStorage.useSort('likes');
-  photoStorage.useFilter('group', ['cats']);
+  photoStorage.useFilter('group', ['cats', 'dogs']);
   photoStorage.render();
 
-
-
-
-
-
-
-
-/*  photoStorage.useFilter('group', {
-    dogs: true,
-    cats: false,
-    bears: false,
-  });*/
-
-/*  photoStorage.render();*/
+  setTimeout(() => {
+      photoStorage.useFilter('group', ['dogs']);
+      photoStorage.render();
+  }, 1000);
 
   console.log(photoStorage);
-
-  /*
-  
-  filters
-   (groups) => {
-     
-   }
-  */
