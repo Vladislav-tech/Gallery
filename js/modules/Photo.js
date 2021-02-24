@@ -29,10 +29,8 @@
        wrapper.classList.add('someClassName');
        container.insertAdjacentHTML('beforeEnd', 
         `
-         <div class="gallery-item">
-            <div class="gallery-item__share-image">
-             <img src="${this.imgUrl}" width="300" height="300"/>
-            </div>
+         <div class="gallery-item" style="background: url('${this.imgUrl}') center no-repeat;">
+            <div class="gallery-item__share-image"></div>
             <div class="gallery-item__data">
                 <span class="photo-data">
                  ${this.date.getDate()}-${this.date.getMonth()}-${this.date.getFullYear()}
