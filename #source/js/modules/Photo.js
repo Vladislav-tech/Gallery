@@ -29,7 +29,7 @@
        wrapper.classList.add('someClassName');
        container.insertAdjacentHTML('beforeEnd', 
         `
-         <div class="gallery-item" style="background: url('${this.imgUrl}') center no-repeat;">
+         <div class="gallery-item" style="background-image: url('${this.imgUrl}'); background-size: cover; background-position: center;">
             <div class="gallery-item__share-image"></div>
             <div class="gallery-item__data">
                 <span class="photo-data">
