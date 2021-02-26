@@ -340,6 +340,7 @@ body {
 .gallery-item__short-description {
   position: absolute;
   top: 100%;
+  width: 100%;
   padding: 2%;
   max-height: 0;
   overflow: hidden;
