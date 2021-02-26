@@ -240,6 +240,8 @@ body {
     width: 300px;
     height: 300px;
     background-size: cover;
+    transition: .4s;
+    cursor: pointer;
 
     .gallery-item__share-image{
         width: 100%;
@@ -284,8 +286,11 @@ body {
         position: absolute;
         top: 100%;
         padding: 2%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
         background-color: #fff;
-
+        cursor: default;
     }
 
     &__title {
