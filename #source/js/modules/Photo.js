@@ -13,6 +13,7 @@
          this.date = new Date(date);
        } 
        else if(typeof date === 'string') {
+         date = date.split('-').reverse().join('-');
        	 this.date = new Date(Date.parse(date));
        } 
        else {
@@ -25,15 +26,18 @@
 
      /* Rendering (temporary version) */
      render(container) {
-       const wrapper = document.createElement('div');
-       wrapper.classList.add('someClassName');
+        const addNull = num => String(num).padStart(2, '0');
+        const day = this.date.getDate();
+        const month = this.date.getMonth() + 1;
+        const year = this.date.getFullYear();
+
        container.insertAdjacentHTML('beforeEnd', 
         `
          <div class="gallery-item" style="background-image: url('${this.imgUrl}'); background-size: cover; background-position: center;">
             <div class="gallery-item__share-image"></div>
             <div class="gallery-item__data">
                 <span class="photo-data">
-                 ${this.date.getDate()}-${this.date.getMonth()}-${this.date.getFullYear()}
+                 ${addNull(day)}-${addNull(month)}-${addNull(year)}
                 </span>
              </div>
             <div class="gallery-item__likes likes">

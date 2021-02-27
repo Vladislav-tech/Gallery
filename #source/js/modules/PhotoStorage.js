@@ -5,6 +5,7 @@
      constructor({container, data}) {
        this.container = document.querySelector(container) || document.body;
        this.photos = Array.isArray(data) ? data : [];
+       this.currentPhotos = [];
        this.sorts = {};
        this.filters = {};
      }
@@ -86,7 +87,7 @@
        }
 
        const filterFunction = this.filters[filterName];
-       this.photos = this.photos.filter((photo) => {
+       this.currentPhotos = this.photos.filter((photo) => {
         return filterFunction(photo, info);
        });
 
@@ -95,7 +96,7 @@
 
      useSort(sortName) {
        const sorttingFunction = this.sorts[sortName];
-       this.photos.sort(sorttingFunction);
+       this.currentPhotos.sort(sorttingFunction);
        return this;
      }
 
@@ -103,8 +104,8 @@
 
      render() {
        this.container.innerHTML = '';
-
-       for(let photo of this.photos) {
+       const photos = this.currentPhotos;
+       for(let photo of photos) {
           photo.render(this.container);
        }
 
