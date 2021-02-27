@@ -3,8 +3,6 @@
   'use strict';
 
   const photoStorage = new PhotoStorage({container: '.gallery-items'});
-  const sortCategories = document.querySelector('#sortCategories');
-  const checkboxContainer = document.querySelector('.checkboxes');
 
   photoStorage.addPhoto({
     imgUrl: 'img/animals/cats/1.jpg', 
@@ -134,35 +132,34 @@
   /* USING */
   ;(() => {
     const groups = {};
+    const sortCategories = document.querySelector('#sortCategories');
+    const checkboxContainer = document.querySelector('.checkboxes');
 
-    let checkboxes = checkboxContainer.querySelectorAll('.custom-checkbox');
-      checkboxes.forEach((checkbox) => {
-        groups[checkbox.dataset.group] = checkbox.checked;
-    });
+     changeSelectGroups();
+     startSystem();
 
-    photoStorage.useFilter('group', groups);
-    photoStorage.useSort(sortCategories.value);
-    photoStorage.render();
-
-    sortCategories.addEventListener('change', (event) => {
-      photoStorage.useFilter('group', groups);
-      photoStorage.useSort(sortCategories.value);
-      photoStorage.render();
-    });
+    sortCategories.addEventListener('change', startSystem);
 
     checkboxContainer.addEventListener('click', (event) => {
       if(!event.target.classList.contains('custom-checkbox')) {
         return;
       }
 
+      changeSelectGroups();
+      startSystem();
+    });
+
+    function changeSelectGroups() {
       let checkboxes = checkboxContainer.querySelectorAll('.custom-checkbox');
       checkboxes.forEach((checkbox) => {
         groups[checkbox.dataset.group] = checkbox.checked;
       });
+    }
 
+    function startSystem() {
       photoStorage.useFilter('group', groups);
       photoStorage.useSort(sortCategories.value);
       photoStorage.render();
-    });
+    }
 
   })();
