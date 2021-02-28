@@ -8,27 +8,30 @@
     <meta name="keywords" content="галерея, онлайн, питомцы">
     <link rel="stylesheet" href="css/light.css" id="theme">
     <link rel="shortcut icon" href="img/icons/favicon.svg">
-    <title>Gallery</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Pet Gallery</title>
 </head>
 <body>
     <div class="container">
         <div class="theme-wrapper">
             <div class="theme-icon-wrapper">
-            </div>
         </div>
-        <h1 class="title">Gallery</h1>
+        </div>
+        <h1 class="title">Pet Gallery</h1>
         <p class="description-text description-text_1">
-            Простая галерея с возможностью сортировки и фильтрацией. В ассортименте галереи представлены милые домашние животные,
-            способные понравиться <b>каждому!</b>
+            <strong>Pet Gallery</strong> - это бесплатная онлайн галерея, доступная каждому. У нас вы можете посмотреть на
+            кошек, собачек, попугаев и многих других чудесных и прекрасных созданий!
         </p>
         <p class="description-text description-text_2">
-            Выберите желаемые фильтры, метод сортировки и вы фотографии будут упорядочены
+            Выберите желаемые <b>фильтры</b>, необходимую вам <b>сортировку</b> и Вы сможете лицезреть милейших творений природы.
         </p>
+
 
         <div class="menu">
             <div class="menu__sorts">
                 <h3 class="menu__sorts-title">Сортировка</h3>
-                <select name="sort" id="sortCategories" class="sort-categories">
+                <select name="sort" id="sortCategories" class="sort-categories" tabindex="1">
                     <option value="date+">По дате добавления (возрастание)</option>
                     <option value="date-">По дате добавления (убывание)</option>
                     <option value="likes+">По лайкам (возрастание)</option>
@@ -39,186 +42,195 @@
                 <h3 class="menu__filters-title">Фильтры</h3>
                 <form class="checkboxes">
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" class="custom-checkbox" id="cats" data-group="cats" name="cats" value="yes" checked>
+                        <input type="checkbox" class="custom-checkbox" id="cats" data-group="cats" name="cats" checked  tabindex="2">
                         <label for="cats">Котики</label>
                     </div>
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" class="custom-checkbox" id="dogs" data-group="dogs" name="dogs" value="yes" checked>
+                        <input type="checkbox" class="custom-checkbox" id="dogs" data-group="dogs" name="dogs" checked  tabindex="3">
                         <label for="dogs">Собачки</label>
                     </div>
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" class="custom-checkbox" id="parrots" data-group="parrots" name="parrots" value="yes" checked>
+                        <input type="checkbox" class="custom-checkbox" id="parrots" data-group="parrots" name="parrots" checked  tabindex="4">
                         <label for="parrots">Попугаи</label>
                     </div>
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" class="custom-checkbox" id="others" data-group="others" name="others" value="yes" checked>
+                        <input type="checkbox" class="custom-checkbox" id="others" data-group="others" name="others" checked  tabindex="5">
                         <label for="others">Остальные</label>
                     </div>                   
                 </form>
             </div>
         </div>
-
-
+    </div>
+        
         <div class="gallery">
-            <div class="gallery-items">
-                <div class="gallery-item active gallery-item_1">
-                    <div class="gallery-item__data">
-                        <span id="photo_1-data" class="photo-data">23-12-2018</span>
+            <div class="container">
+                <div class="gallery-items">
+                    <div class="gallery-item active gallery-item_1">
+                        
+                        <div class="gallery-item__data">
+                            <span id="photo_1-data" class="photo-data">23-12-2018</span>
+                        </div>
+                        <div class="gallery-item__likes likes">
+                            <span class="likes-amount" id="photo_1-likes">53</span>
+                            <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                        </div>
+                        <div class="gallery-item__short-description">
+                            <h5 class="gallery-item__title">У Сёмочки День Рождения!</h5>
+                            <p class="gallery-item__text">Вы только посмотрите на этого прекрасного малыша! Он такой хорошенький, красивый и прелестный! <br>
+                               Я очень люблю своего Сёму.&#128151;&#128151;&#128151; Мы сделали эту фотографию на его день рождение (5 годиков)! 	
+                               &#127881;...
+                            </p>
+                        </div>
                     </div>
-                    <div class="gallery-item__likes likes">
-                        <span class="likes-amount" id="photo_1-likes">53</span>
-                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+    
+                    <div class="gallery-item gallery-item_2">
+                        <div class="gallery-item__data">
+                            <span id="photo_2-data" class="photo-data">25-12-2018</span>
+                        </div>
+                        <div class="gallery-item__likes likes">
+                            <span class="likes-amount" id="photo_2-likes">13</span>
+                            <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                        </div>
+    
+                        <div class="gallery-item__short-description">
+                            <h5 class="gallery-item__title">Грациозный Кеша</h5>
+                            <p class="gallery-item__text"> Решил сделать фотографию своего любимого попугая Кеши. Он довольно таки фотогеничный.
+                                Больше всего ему нравится, когда его гладят по головке и дают печенюшки.
+                            </p>
+                        </div>
                     </div>
-                    <div class="gallery-item__short-description">
-                        <h5 class="gallery-item__title">У Сёмочки День Рождения!</h5>
-                        <p class="gallery-item__text">Вы только посмотрите на этого прекрасного малыша! Он такой хорошенький, красивый и прелестный! <br>
-                           Я очень люблю своего Сёму.&#128151;&#128151;&#128151; Мы сделали эту фотографию на его день рождение (5 годиков)! 	
-                           &#127881;...
-                        </p>
+    
+                    <div class="gallery-item gallery-item_3">
+                        <div class="gallery-item__data">
+                            <span id="photo_3-data" class="photo-data">29-12-2018</span>
+                        </div>
+                        <div class="gallery-item__likes likes">
+                            <span class="likes-amount" id="photo_3-likes">35</span>
+                            <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                        </div>
+    
+                        <div class="gallery-item__short-description">
+                            <h5 class="gallery-item__title">Агата</h5>
+                            <p class="gallery-item__text">Мне 12 лет и мне подарили морскую свинку. Я назвала её в честь своей любимой группы - Агата Кристи.
+                                Моя морская свинка любит играть, купаться и слушать вместе со мной Агату Кристи. Я люблю своего питомца.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="gallery-item gallery-item_2">
-                    <div class="gallery-item__data">
-                        <span id="photo_2-data" class="photo-data">25-12-2018</span>
+    
+                    <div class="gallery-item gallery-item_4">
+                        <div class="gallery-item__data">
+                            <span id="photo_4-data" class="photo-data">31-12-2018</span>
+                        </div>
+                        <div class="gallery-item__likes likes">
+                            <span class="likes-amount" id="photo_4-likes">44</span>
+                            <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                        </div>
+    
+                        <div class="gallery-item__short-description">
+                            <h5 class="gallery-item__title">Веня</h5>
+                            <p class="gallery-item__text">Веня любит спать, есть и лежать на боку. Ему нравится есть морковку и сухари, которые мы вместе с мужем делаем по вторникам.
+                                Нашему маленькому другу иногда нравится гулять по квартире. Мы выпускаем его каждую пятницу.
+                            </p>
+                        </div>
                     </div>
-                    <div class="gallery-item__likes likes">
-                        <span class="likes-amount" id="photo_2-likes">13</span>
-                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+    
+                    <div class="gallery-item gallery-item_5">
+                        <div class="gallery-item__data">
+                            <span id="photo_5-data" class="photo-data">01-01-2019</span>
+                        </div>
+                        <div class="gallery-item__likes likes">
+                            <span class="likes-amount" id="photo_5-likes">12</span>
+                            <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                        </div>
+    
+                        <div class="gallery-item__short-description">
+                            <h5 class="gallery-item__title">Рекс, Таша, Дик</h5>
+                            <p class="gallery-item__text">Это мои детки &#128525;. Они - маленькие озорные щенята, которые любят бегать, играть и кусаться &#128021;. Ох, как же тяжело
+                                было сделать это фото &#128247;. Они всё время игрались!
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="gallery-item__short-description">
-                        <h5 class="gallery-item__title">Грациозный Кеша</h5>
-                        <p class="gallery-item__text"> Решил сделать фотографию своего любимого попугая Кеши. Он довольно таки фотогеничный.
-                            Больше всего ему нравится, когда его гладят по головке и дают печенюшки.
-                        </p>
+    
+                    <div class="gallery-item gallery-item_6">
+                        <div class="gallery-item__data">
+                            <span id="photo_6-data" class="photo-data">13-01-2019</span>
+                        </div>
+                        <div class="gallery-item__likes likes">
+                            <span class="likes-amount" id="photo_6-likes">54</span>
+                            <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                        </div>
+    
+                        <div class="gallery-item__short-description">
+                            <h5 class="gallery-item__title">Анита</h5>
+                            <p class="gallery-item__text">Её зовут Анита, ей 7 лет. Она любит гулять, играть с резиновым мячом. Аните не нравится шум, купаться
+                                и кошки. Я не знаю почему ей это не нравится.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="gallery-item gallery-item_3">
-                    <div class="gallery-item__data">
-                        <span id="photo_3-data" class="photo-data">29-12-2018</span>
+    
+                    <div class="gallery-item gallery-item_7">
+                        <div class="gallery-item__data">
+                            <span id="photo_6-data" class="photo-data">13-01-2019</span>
+                        </div>
+                        <div class="gallery-item__likes likes">
+                            <span class="likes-amount" id="photo_6-likes">5</span>
+                            <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                        </div>
+    
+                        <div class="gallery-item__short-description">
+                            <h5 class="gallery-item__title">Годжи</h5>
+                            <p class="gallery-item__text">Попугаю Годжи 4 года. Он в расцвете сил, очень любит петь, летать и конечно играть! Мне подарили родители
+                                его на 18-летие. Я забочусь и люблю своего попугайчика.
+                            </p>
+                        </div>
                     </div>
-                    <div class="gallery-item__likes likes">
-                        <span class="likes-amount" id="photo_3-likes">35</span>
-                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+    
+                    <div class="gallery-item gallery-item_8">
+                        <div class="gallery-item__data">
+                            <span id="photo_8-data" class="photo-data">15-01-2019</span>
+                        </div>
+                        <div class="gallery-item__likes likes">
+                            <span class="likes-amount" id="photo_8-likes">33</span>
+                            <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                        </div>
+    
+                        <div class="gallery-item__short-description">
+                            <h5 class="gallery-item__title">Такиша</h5>
+                            <p class="gallery-item__text">Такиша - активный попугай. Очень любит петь и шуметь в клетке. Иногда приходится даже накрывать простынёй
+                                клетку, чтобы она не шумела. В любом случае, с ней не соскучишься вовсе!
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="gallery-item__short-description">
-                        <h5 class="gallery-item__title">Агата</h5>
-                        <p class="gallery-item__text">Мне 12 лет и мне подарили морскую свинку. Я назвала её в честь своей любимой группы - Агата Кристи.
-                            Моя морская свинка любит играть, купаться и слушать вместе со мной Агату Кристи. Я люблю своего питомца.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="gallery-item gallery-item_4">
-                    <div class="gallery-item__data">
-                        <span id="photo_4-data" class="photo-data">31-12-2018</span>
-                    </div>
-                    <div class="gallery-item__likes likes">
-                        <span class="likes-amount" id="photo_4-likes">44</span>
-                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
-                    </div>
-
-                    <div class="gallery-item__short-description">
-                        <h5 class="gallery-item__title">Веня</h5>
-                        <p class="gallery-item__text">Веня любит спать, есть и лежать на боку. Ему нравится есть морковку и сухари, которые мы вместе с мужем делаем по вторникам.
-                            Нашему маленькому другу иногда нравится гулять по квартире. Мы выпускаем его каждую пятницу.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="gallery-item gallery-item_5">
-                    <div class="gallery-item__data">
-                        <span id="photo_5-data" class="photo-data">01-01-2019</span>
-                    </div>
-                    <div class="gallery-item__likes likes">
-                        <span class="likes-amount" id="photo_5-likes">12</span>
-                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
-                    </div>
-
-                    <div class="gallery-item__short-description">
-                        <h5 class="gallery-item__title">Рекс, Таша, Дик</h5>
-                        <p class="gallery-item__text">Это мои детки &#128525;. Они - маленькие озорные щенята, которые любят бегать, играть и кусаться &#128021;. Ох, как же тяжело
-                            было сделать это фото &#128247;. Они всё время игрались!
-                        </p>
-                    </div>
-                </div>
-
-                <div class="gallery-item gallery-item_6">
-                    <div class="gallery-item__data">
-                        <span id="photo_6-data" class="photo-data">13-01-2019</span>
-                    </div>
-                    <div class="gallery-item__likes likes">
-                        <span class="likes-amount" id="photo_6-likes">54</span>
-                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
-                    </div>
-
-                    <div class="gallery-item__short-description">
-                        <h5 class="gallery-item__title">Анита</h5>
-                        <p class="gallery-item__text">Её зовут Анита, ей 7 лет. Она любит гулять, играть с резиновым мячом. Аните не нравится шум, купаться
-                            и кошки. Я не знаю почему ей это не нравится.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="gallery-item gallery-item_7">
-                    <div class="gallery-item__data">
-                        <span id="photo_6-data" class="photo-data">13-01-2019</span>
-                    </div>
-                    <div class="gallery-item__likes likes">
-                        <span class="likes-amount" id="photo_6-likes">5</span>
-                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
-                    </div>
-
-                    <div class="gallery-item__short-description">
-                        <h5 class="gallery-item__title">Годжи</h5>
-                        <p class="gallery-item__text">Попугаю Годжи 4 года. Он в расцвете сил, очень любит петь, летать и конечно играть! Мне подарили родители
-                            его на 18-летие. Я забочусь и люблю своего попугайчика.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="gallery-item gallery-item_8">
-                    <div class="gallery-item__data">
-                        <span id="photo_8-data" class="photo-data">15-01-2019</span>
-                    </div>
-                    <div class="gallery-item__likes likes">
-                        <span class="likes-amount" id="photo_8-likes">33</span>
-                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
-                    </div>
-
-                    <div class="gallery-item__short-description">
-                        <h5 class="gallery-item__title">Такиша</h5>
-                        <p class="gallery-item__text">Такиша - активный попугай. Очень любит петь и шуметь в клетке. Иногда приходится даже накрывать простынёй
-                            клетку, чтобы она не шумела. В любом случае, с ней не соскучишься вовсе!
-                        </p>
-                    </div>
-                </div>
-
-                <div class="gallery-item gallery-item_9">
-                    <div class="gallery-item__data">
-                        <span id="photo_9-data" class="photo-data">19-01-2019</span>
-                    </div>
-                    <div class="gallery-item__likes likes">
-                        <span class="likes-amount" id="photo_9-likes">43</span>
-                        <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
-                    </div>
-
-                    <div class="gallery-item__short-description">
-                        <h5 class="gallery-item__title">Каа</h5>
-                        <p class="gallery-item__text">Некоторым людям не нравятся змеи по самым разным причинам. Каа - вовсе не страшный монстер,
-                            а милый друг. Ему нравится, когда его гладят и находиться в тепле.
-                        </p>
+    
+                    <div class="gallery-item gallery-item_9">
+                        <div class="gallery-item__data">
+                            <span id="photo_9-data" class="photo-data">19-01-2019</span>
+                        </div>
+                        <div class="gallery-item__likes likes">
+                            <span class="likes-amount" id="photo_9-likes">43</span>
+                            <img src="img/icons/like.svg" alt="like" class="likes-icon" width="28" height="26">
+                        </div>
+    
+                        <div class="gallery-item__short-description">
+                            <h5 class="gallery-item__title">Каа</h5>
+                            <p class="gallery-item__text">Некоторым людям не нравятся змеи по самым разным причинам. Каа - вовсе не страшный монстер,
+                                а милый друг. Ему нравится, когда его гладят и находиться в тепле.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
-    </div>
 
     <footer class="footer">
-        <h3 class="copyright">&#169;Copyright, 2021</h3>
+        <div class="container">
+            <h3 class="copyright">&#169;Copyright, 2021</h3>
+        <div class="share">
+        <!-- uSocial -->
+            <div class="uSocial-Share" data-pid="47f27390043edcd30ffbe27e26593d32" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter1,counter-after,mobile_position_right,cutUrl" data-social="vk,telegram,fb,bookmarks,spoiler"></div>
+        <!-- /uSocial -->       
+        </div>
         <div class="developers">
             <h3 class="developers__title">Разработчики</h3>
             <p>
@@ -228,8 +240,10 @@
                 <a href="https://github.com/3BePbZZZ" target="_blank">3BePbZZZ</a>
             </p>
         </div>
+        </div>
     </footer>
 
+    <script async src="https://usocial.pro/usocial/usocial.js?uid=0925e713dcf59656&v=6.1.5" data-script="usocial" charset="utf-8"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

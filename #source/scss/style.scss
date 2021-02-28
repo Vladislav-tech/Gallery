@@ -11,10 +11,10 @@
 body {
     font-family: $mainFont;
     background-color: $backgroundLight;
+    color: $textColor;
 }
 
 .container {
-    border: 1px solid black;
     width: 90%;
     margin: 0 auto;
 }
@@ -31,13 +31,12 @@ body {
 }
 
 .description-text {
-    margin: 119px 0 0 0;
-    text-indent: 36px;
+    margin: 119px 0 0 36px;
     font-size: 18px;
 }
 
 .description-text_2 {
-    margin: 25px 0;
+    margin: 20px 0 20px 36px;
 }
 
 .theme-wrapper {
@@ -82,6 +81,10 @@ body {
         margin-top: 6px;
         margin-bottom: 26px;
         height: 40px;
+
+        &:focus {
+            box-shadow: 0 0 0 0.15rem $textColor;
+        }
     }
 
     &__sorts-title {
@@ -163,7 +166,7 @@ body {
       
           /* стили для чекбокса, находящегося в фокусе */
           .custom-checkbox:focus+label::before {
-            box-shadow: 0 0 0 0.2rem rgba(251, 255, 0, 0.25);
+            box-shadow: 0 0 0 0.1rem rgb(255, 255, 255);
           }
       
           /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
@@ -237,7 +240,6 @@ body {
 .gallery-item {
     position: relative;
     background-color: #787878;
-    width: 300px;
     height: 300px;
     background-size: cover;
     transition: .4s;
@@ -247,7 +249,7 @@ body {
         position: absolute;
         background-color: #acacac;
         top: 94.7%;
-        font-weight: 200;
+        font-weight: 400;
         font-size: 14px;
         line-height: 16px;
     }
@@ -257,8 +259,8 @@ body {
         position: absolute;
         display: flex;
         align-items: center;
-        top: 250px;
-	    left: 208px;
+        top: 85%;
+	    left: 72%;
         font-size: 30px;
         line-height: 35px;
         color: #fff;
@@ -273,7 +275,6 @@ body {
         position: absolute;
         top: 100%;
         width: 100%;
-        padding: 2%;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-out;
@@ -285,15 +286,15 @@ body {
         font-weight: 500;
         font-size: 18px;
         line-height: 21px;
-        margin: 20px 0 0 0;
+        margin: 20px 0 0 10px;
     }
 
     &__text {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 13px;
         line-height: 15px;
         text-indent: 20px;
-        margin: 10px 0 0 0;
+        margin: 10px;
     }
 }
 
@@ -303,12 +304,21 @@ body {
 // footer start
 
 .footer {
+    background-color: $primary;
+}
+
+.footer .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-    background-color: $primary;
     color: #fff;
-    padding: 30px;
+    margin-top: 150px;
     min-height: 132px;
+}
+
+.share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .copyright {
@@ -332,6 +342,10 @@ body {
     & a {
         color: rgb(255, 255, 255);
         transition: .4s;
+
+        &:focus {
+            box-shadow: 0 0 0 0.1rem rgb(255, 255, 255);
+        }
     }
 
     & a:hover {
@@ -344,7 +358,19 @@ body {
 
 // media
 
+
+@media screen and(max-width: 778px) {
+    .share {
+        order: 1;
+        justify-content: flex-start;
+    }
+}
+
 @media screen and(max-width: 768px) {
+    .container {
+        width: 92.5%;
+    }
+
     .menu {
         min-height: 167px;
         align-items: center;
@@ -400,7 +426,17 @@ body {
 
 
 @media screen and(max-width: 432px) {
+    .container {
+        width: 95%;
+    }
+
     .checkboxes {
         width: 80%;
+    }
+}
+
+@media screen and(max-width: 552px) {
+    .developers {
+        text-align: left;;
     }
 }
