@@ -47,12 +47,13 @@ body {
 
 .theme-icon-wrapper {
     background: url("../img/icons/sun.svg") center no-repeat;
-    cursor: pointer;
     width: 222px;
     height: 64px;
+    border-radius: 10px;
     border: 1px solid $backgroundDark;
     background-color: $primary;
     transition: .7s;
+    cursor: pointer;
 }
 
 .theme-icon-wrapper:hover {
@@ -247,13 +248,22 @@ body {
     transition: .4s;
     cursor: pointer;
 
+    &:hover {
+        box-shadow: 5px 5px 5px $primary;
+        border-radius: 18px;
+    }
+
     &__data {
         position: absolute;
         background-color: #acacac;
-        top: 94.7%;
+        top: 93.8%;
+        left: 1.5%;
+        opacity: 0.87;
+        border-radius: 5px;
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
+        cursor: default;
     }
 
 
@@ -283,6 +293,8 @@ body {
         transition: max-height 0.3s ease-out;
         background-color: #fff;
         color: $titleColor;
+        border-bottom-right-radius: 10px;
+	    border-bottom-left-radius: 10px;
         cursor: default;
 
     }

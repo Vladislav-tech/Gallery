@@ -19,6 +19,11 @@ body {
     margin: 0 auto;
 }
 
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .title {
     font-family: $mainFont;
     color: $titleColor;
@@ -28,6 +33,24 @@ body {
     font-size: 64px;
     line-height: 75px;
     letter-spacing: 0.05em;
+    text-shadow:
+        -1px -1px #FFF,
+        -2px -2px #FFF,
+        -1px 1px #FFF,
+        -2px 2px #FFF,
+        1px 1px #FFF,
+        2px 2px #FFF,
+        1px -1px #FFF,
+        2px -2px #FFF,
+        -3px -3px 2px #BBB,
+        -3px 3px 2px #BBB,
+        3px 3px 2px #BBB,
+        3px -3px 2px #BBB;
+        color: steelblue;
+    transition: all 1s;
+    &:hover {
+        color: yellowgreen;
+    }
 }
 
 .description-text {
@@ -46,11 +69,12 @@ body {
 
 .theme-icon-wrapper {
     background: url("../img/icons/moon.svg") center no-repeat;
-    cursor: pointer;
+    border-radius: 10px;
     width: 222px;
     height: 64px;
     border: 1px solid $backgroundDark;
     transition: .7s;
+    cursor: pointer;
 }
 
 .theme-icon-wrapper:hover {
@@ -66,7 +90,7 @@ body {
     background-color: $primary;
     color: #fff;
     margin-top: 50px;
-
+    border-radius: 18px;
 
     &__filters {
         margin-top: 11px;
@@ -245,13 +269,22 @@ body {
     transition: .4s;
     cursor: pointer;
 
+    &:hover {
+        box-shadow: 5px 5px 5px rgb(53, 53, 53);
+        border-radius: 18px;
+    }
+
     &__data {
         position: absolute;
         background-color: #acacac;
-        top: 94.7%;
+        top: 93.8%;
+        left: 1.5%;
+        opacity: 0.87;
+        border-radius: 5px;
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
+        cursor: default;
     }
 
 
@@ -279,6 +312,9 @@ body {
         overflow: hidden;
         transition: max-height 0.3s ease-out;
         background-color: #fff;
+        border: 1px solid #b6b6b6;
+        border-bottom-right-radius: 10px;
+	    border-bottom-left-radius: 10px;
         cursor: default;
     }
 
@@ -371,12 +407,21 @@ body {
         width: 92.5%;
     }
 
+    .container-fluid {
+        width: 100% !important;
+    }
+
     .menu {
         min-height: 167px;
         align-items: center;
+        padding: 15px;
 
         &__sorts {
             margin-left: 79px;
+        }
+
+        &__filters {
+            height: 100px;
         }
 
         &__filters-title {
