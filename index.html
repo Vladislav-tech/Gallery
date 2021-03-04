@@ -13,6 +13,19 @@
     <title>Pet Gallery</title>
 </head>
 <body>
+    <div class="modal-wrapper">
+        <div class="modal">
+            <h2 class="modal__title">Добавьте вашего любимого питомца</h2>
+            <div class="modal__add-photo">
+                <input type="file" class="add-file">
+            </div>
+            <div>
+                <input type="text" id="photo-name" placeholder="Название фото"> <br>
+                <input type="text" id="photo-description" placeholder="Краткое описание"> <br>
+                <button class="btn-add-photo">Добавить фото</button>
+            </div>
+        </div>
+    </div>
     <div class="container container-fluid">
         <div class="theme-wrapper">
             <div class="theme-icon-wrapper">
@@ -40,6 +53,7 @@
                     <option value="likes-">По лайкам (убывание)</option>
                 </select>
             </div>
+
             <div class="menu__filters">
                 <h3 class="menu__filters-title">Фильтры</h3>
                 <form class="checkboxes">
@@ -60,6 +74,10 @@
                         <label for="others">Остальные</label>
                     </div>                   
                 </form>
+            </div>
+
+            <div class="button-wrapper">
+                <button class="add-photo">Добавить фото</button>
             </div>
         </div>
     </div>
