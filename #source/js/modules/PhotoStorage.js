@@ -4,7 +4,12 @@
   class PhotoStorage {
      constructor({container, data}) {
        this.container = document.querySelector(container) || document.body;
-       this.photos = Array.isArray(data) ? data : [];
+       this.photos = [];
+       if(Array.isArray(data) && data.length > 0) {
+         for(let photo of data) {
+          this.addPhoto(photo);
+         }
+       }
        this.currentPhotos = [];
        this.sorts = {};
        this.filters = {};

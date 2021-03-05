@@ -26,10 +26,6 @@
 
      /* Rendering (temporary version) */
      render(container) {
-        const addNull = num => String(num).padStart(2, '0');
-        const day = this.date.getDate();
-        const month = this.date.getMonth() + 1;
-        const year = this.date.getFullYear();
 
        container.insertAdjacentHTML('beforeEnd', 
         `
@@ -37,7 +33,7 @@
             <div class="gallery-item__share-image"></div>
             <div class="gallery-item__data">
                 <span class="photo-data">
-                 ${addNull(day)}-${addNull(month)}-${addNull(year)}
+                 ${this.date.getTime()}
                 </span>
              </div>
             <div class="gallery-item__likes likes">

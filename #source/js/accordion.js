@@ -3,7 +3,7 @@
 
 
   galleryItems.addEventListener('click', (event) => {
-    if ( event.target.classList.contains('gallery-item') ) {
+    if ( !event.target.classList.contains('gallery-item') ) {
      return;
     }
 
