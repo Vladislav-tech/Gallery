@@ -94,7 +94,6 @@
     ], 
     container: '.gallery-items'
   });
-  console.log(photoStorage);
 
   photoStorage.addSort('likes+', (photoA, photoB) => {
     return photoA.likes - photoB.likes;
@@ -127,12 +126,23 @@
 
   /* USING */
   ;(() => {
-    const groups = {};
+    const groups = JSON.parse( localStorage.getItem('selectedGroups') ) || {};
     const sortCategories = document.querySelector('#sortCategories');
     const checkboxContainer = document.querySelector('.checkboxes');
 
-     changeSelectGroups();
-     startSystem();
+    for(let child of sortCategories.children) {
+       if(child.value === localStorage.getItem('typeSorting')) {
+         child.selected = true;
+         break;
+       }
+    }
+
+    checkboxContainer.querySelectorAll('.custom-checkbox').forEach((checkbox) => {
+        checkbox.checked = groups[checkbox.dataset.group];
+    });
+
+    changeSelectGroups();
+    startSystem();
 
     sortCategories.addEventListener('change', startSystem);
 
@@ -147,12 +157,16 @@
 
     function changeSelectGroups() {
       let checkboxes = checkboxContainer.querySelectorAll('.custom-checkbox');
+
       checkboxes.forEach((checkbox) => {
         groups[checkbox.dataset.group] = checkbox.checked;
       });
     }
 
     function startSystem() {
+      localStorage.setItem('typeSorting', sortCategories.value);
+      localStorage.setItem('selectedGroups', JSON.stringify(groups, null, 4));
+
       photoStorage.useFilter('group', groups);
       photoStorage.useSort(sortCategories.value);
       photoStorage.render();
