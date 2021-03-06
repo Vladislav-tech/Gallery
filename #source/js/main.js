@@ -35,9 +35,12 @@
 
   /* USING */
   ;(() => {
-    const groups = JSON.parse( localStorage.getItem('selectedGroups') || {});
+    const groups = JSON.parse( localStorage.getItem('selectedGroups') || '{}');
     const sortCategories = document.querySelector('#sortCategories');
     const checkboxContainer = document.querySelector('.checkboxes');
+
+    changeSelectGroups();
+    startSystem();
 
     for(let child of sortCategories.children) {
        if(child.value === localStorage.getItem('typeSorting')) {
@@ -49,9 +52,6 @@
     checkboxContainer.querySelectorAll('.custom-checkbox').forEach((checkbox) => {
         checkbox.checked = groups[checkbox.dataset.group];
     });
-
-    changeSelectGroups();
-    startSystem();
 
     sortCategories.addEventListener('change', startSystem);
 
